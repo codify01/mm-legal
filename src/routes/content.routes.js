@@ -59,7 +59,7 @@ router.get('/:id', async (req, res) => {
         if (!content) { return res.status(404).json({ message: 'Content not found' })
         }} catch (error) {
     console.log(error);
-            return res.status(500).json({ error: 'Failed to fetch content' });
+            return res.status(500).json({ error: 'Failed to fetch content', message:error.message });
             
         }
 })
